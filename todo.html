@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>todo</title>
+    <link rel="stylesheet" href="css/pure.css">
+    <link rel="stylesheet" href="css/todo.css">
+</head>
+<body>
+    <div id="todo-app"></div>
+
+    <script src="http://yui.yahooapis.com/3.16.0/build/yui/yui-min.js"></script>
+    <script src="js/yui-config.js"></script>
+    <script>
+        YUI().use('event', 'todoApp', function(Y) {
+            Y.todoapp.app = new Y.todoapp.TodoApp({
+                container: '#todo-app'
+            });
+
+            Y.todoapp.app.render();
+        });
+    </script>
+</body>
+</html>
